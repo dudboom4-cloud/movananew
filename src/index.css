@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Brand red-to-orange hero and navbar gradients matching Móvana */
+.movana-nav-gradient {
+  background: linear-gradient(90deg, #DC2A25 0%, #EA4A24 55%, #F26422 100%);
+}
+
+.movana-hero-gradient {
+  background: linear-gradient(105deg, #DC2A25 0%, #E84624 45%, #F48324 100%);
+}
+
+.movana-btn-gradient {
+  background: linear-gradient(90deg, #E23426 0%, #F27524 100%);
+}
+
+.movana-btn-gradient:hover {
+  background: linear-gradient(90deg, #CC291D 0%, #DF6517 100%);
+}
+
+.movana-role-backdrop {
+  background: radial-gradient(circle at 50% 45%, #7E2E14 0%, #44160A 45%, #1D0905 100%);
+}
+
+/* Scalloped red-and-cream street stall awning */
+.movana-awning-top {
+  background: repeating-linear-gradient(
+    90deg,
+    #E23428 0px,
+    #E23428 36px,
+    #F9E4A6 36px,
+    #F9E4A6 72px
+  );
+}
+
+/* Leaflet map refinements */
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 1;
+}
+
+.movana-pin-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.dark .leaflet-tile-pane {
+  filter: brightness(0.82) contrast(1.06) saturate(0.85);
+}
+
+/* Hide scrollbars nicely for horizontal collections */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

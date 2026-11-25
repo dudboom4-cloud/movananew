@@ -1,0 +1,6 @@
+{
+  "name": "Móvana — Live Street Food & Vegetable Thela Marketplace",
+  "description": "Discover live street-food stalls and neighborhood vegetable carts near you, pre-order with UPI, manage your own thela stall, or earn as a Móvana delivery partner.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
